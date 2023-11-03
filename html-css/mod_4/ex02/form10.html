@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>formulario</title>
+</head>
+<body>
+    <h1>exemplo de formulario</h1> 
+    <form action="cadastro.php" method="get" autocomplete="on">
+   
+    <p>
+        <label for="iano">Em qual ano você nasceu lazarento  ?</label>
+        <input type="number" name="ano" id="iano" min="0" max="2100"
+         oninput="calcIDADE()">
+    </p>
+
+    <p>
+        <label for="iidade">sua idade jovem é</label>
+        <output id="iidade">0</output>
+    </p>
+
+    <p>
+        <input type="submit" value="enviar">
+        <input type="reset" value="limpar">
+
+    </p>
+</form>
+
+<script>
+    function calcIDADE(){
+        let atual = new Date().getFullYear()
+        iidade.innerHTML = Number(atual) - Number(iano.value)
+    }
+</script>
+</body>
+</html>
